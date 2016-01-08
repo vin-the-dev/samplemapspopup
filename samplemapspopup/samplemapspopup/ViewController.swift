@@ -82,6 +82,10 @@ class ViewController: UIViewController, MKMapViewDelegate {
         let orgin = view.bounds.origin
         popover!.sourceRect = CGRect(origin: orgin, size: view.bounds.size)
         
+        UIView.animateWithDuration(5, animations: {
+            vc.preferredContentSize = CGSizeMake(300, 400)
+        })
+        
         self.presentViewController(nav, animated: true, completion: nil)
         
     }
